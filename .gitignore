@@ -1,0 +1,72 @@
+# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+dist/
+build/
+*.dist-info/
+
+# ─── Secrets & Environment ───────────────────────────────────────────────────
+# NEVER commit real credentials
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# ─── Database ────────────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── Uploaded media (real site photos/videos) ────────────────────────────────
+backend/uploads/
+
+# ─── Node / Frontend ─────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+.npm/
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ─── IDEs ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.user
+*.sublime-project
+*.sublime-workspace
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+pip-log.txt
+
+# ─── Coverage & Testing ──────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ─── AWS ─────────────────────────────────────────────────────────────────────
+# Don't commit AWS credentials or config
+.aws/
+aws-exports.js
