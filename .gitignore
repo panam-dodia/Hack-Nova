@@ -28,6 +28,20 @@ secrets/
 
 # ─── Uploaded media (real site photos/videos) ────────────────────────────────
 backend/uploads/
+uploads/
+# Real-time monitoring generates:
+# - uploads/monitoring/{session_id}/frames/*.jpg
+# - uploads/monitoring/{session_id}/clips/*.mp4
+# - uploads/monitoring/{session_id}/*.mp4 (uploaded videos)
+
+# Test videos (don't commit large test files)
+test_videos/
+*.mp4
+*.mov
+*.avi
+# But allow any demo/sample videos in docs
+!docs/**/*.mp4
+!docs/**/*.mov
 
 # ─── Node / Frontend ─────────────────────────────────────────────────────────
 node_modules/

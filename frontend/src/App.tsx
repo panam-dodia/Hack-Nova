@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import NewInspection from './pages/NewInspection'
 import InspectionDetail from './pages/InspectionDetail'
+import LiveMonitor from './pages/LiveMonitor'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/inspect" element={<NewInspection />} />
           <Route path="/inspection/:id" element={<InspectionDetail />} />
+          <Route path="/live-monitor" element={<LiveMonitor />} />
         </Routes>
       </main>
     </div>

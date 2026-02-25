@@ -10,6 +10,7 @@ from app.config import settings
 from app.database import init_db
 from app.api.inspections import router as inspections_router
 from app.api.voice import router as voice_router
+from app.api.monitoring import router as monitoring_router
 
 logging.basicConfig(
     level=logging.INFO,
@@ -35,6 +36,7 @@ app.add_middleware(
 # ─── Routers ─────────────────────────────────────────────────────────────────
 app.include_router(inspections_router)
 app.include_router(voice_router)
+app.include_router(monitoring_router)
 
 # ─── Static file serving for uploaded media ──────────────────────────────────
 uploads_dir = Path(settings.upload_dir)

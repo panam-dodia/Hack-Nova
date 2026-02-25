@@ -61,3 +61,41 @@ export interface VoiceChatResponse {
   original_text: string
   is_violation: boolean
 }
+
+// Real-time monitoring types
+export type MonitoringStatus = 'pending' | 'processing' | 'paused' | 'completed' | 'stopped' | 'failed'
+
+export interface MonitoringSession {
+  id: string
+  video_file_path: string
+  original_filename: string | null
+  status: MonitoringStatus
+  frame_rate: number | null
+  total_frames: number | null
+  duration_seconds: number | null
+  current_frame: number
+  current_timestamp: number
+  violations_detected_count: number
+  analysis_interval_seconds: number
+  auto_ticket_filing: boolean
+  created_at: string
+  started_at: string | null
+  completed_at: string | null
+}
+
+export interface ViolationAlert {
+  violation_id: string
+  session_id: string
+  timestamp: number
+  frame_number: number
+  hazard_type: string
+  severity: Severity
+  observation: string
+  location: string
+  osha_code: string | null
+  osha_title: string | null
+  plain_english: string | null
+  frame_path: string | null
+  video_clip_path: string | null
+  detected_at: string
+}

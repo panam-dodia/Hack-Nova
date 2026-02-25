@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { HardHat, LayoutDashboard, PlusCircle, Mic } from 'lucide-react'
+import { HardHat, LayoutDashboard, PlusCircle, Mic, Video } from 'lucide-react'
 import { useState } from 'react'
 import VoiceAssistant from './VoiceAssistant'
 import clsx from 'clsx'
@@ -42,6 +42,7 @@ export default function Navbar() {
             {/* Nav links */}
             <div className="flex items-center gap-1">
               {navLink('/dashboard', 'Dashboard', <LayoutDashboard className="w-4 h-4" />)}
+              {navLink('/live-monitor', 'Live Monitor', <Video className="w-4 h-4" />)}
               {navLink('/inspect', 'New Inspection', <PlusCircle className="w-4 h-4" />)}
 
               <button
